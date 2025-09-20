@@ -25,6 +25,7 @@ function partition(arr: number[], lo: number, hi: number): number {
         }
     }
 
+    // move the pivot to its correct position which is idx + 1 or next to the left side sroted elements which are less than or equal to pivot
     idx++; // Place the pivot in the correct position
     // Swap arr[hi] (pivot) and arr[idx]
     arr[hi] = arr[idx];
