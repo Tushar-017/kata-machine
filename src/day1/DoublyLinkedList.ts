@@ -34,7 +34,6 @@ export default class DoublyLinkedList<T> {
         node.next = this.head;
         this.head.prev = node;
         this.head = node;
-        return;
     }
     insertAt(item: T, idx: number): void {
         if (idx > this.length) {
@@ -54,8 +53,8 @@ export default class DoublyLinkedList<T> {
         node.prev = curr.prev;
         curr.prev = node;
 
-        if (node.prev) {
-            node.prev.next = node;
+        if (curr.prev) {
+            curr.prev.next = node;
         }
     }
     append(item: T): void {
